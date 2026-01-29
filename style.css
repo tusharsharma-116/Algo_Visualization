@@ -1,0 +1,480 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bag1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000000;
+            padding: 10px 20px;
+            color: white;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.8s;
+        }
+
+        .navbar a:hover {
+            color: #ff004f;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 200px;
+            height: 70vh;
+            
+        }
+        .container h2{
+            animation-name: glow;
+            animation-duration: 5s;
+
+        }
+        @keyframes glow{
+          0%
+          {
+            font-size: 0px;
+            transform: translateY(-600px);
+          }
+          /* 50%{
+            transform: translateY(-200px);
+            font-size: 3rem;
+          } */
+          100%{
+          }
+        }
+
+        .c2 {
+            color: #ff004f;
+            font-size: 3rem;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .container1 {
+            height: 70vh;
+            margin-left: 100px;
+            color: #ff004f;
+        }
+
+
+        .section1 h1 {
+            padding-top: 50px;
+            font-size: 2.5rem;
+            color: #ff004f;
+           animation-name: left;
+           animation-duration: 12s;
+           animation-iteration-count: infinite;
+        }
+        @keyframes left{
+          0%{
+ 
+          }
+          50%{
+           transform:translateX(+900px)
+          }
+          100%{
+          }
+        }
+
+        .hr {
+            height: 3px;
+            background-color: white;
+        }
+
+
+        .section2 {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            
+        }
+   
+        .container2 {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            transition: background-color 3s ease,transform 3s ease;
+        }
+        .container2:hover{
+            background-color: #000000;
+            transform: rotate(360deg);
+        }
+
+        .container2 h1 {
+            color: #ff004f;
+        }
+
+        .tip {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #474343;
+            transition: color 2s;
+        }
+        .tip:hover{
+            color: white;
+        }
+
+        .container2 button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .container2 button:hover {
+            background-color: #219150;
+        }
+
+
+
+        .men {
+            color: white;
+            text-align: center;
+        }
+        .men h1{
+            color: #ff004f;
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-around;
+            color: white;
+        }
+
+        .copy {
+            text-align: center;
+            padding: 3px;
+        }
+
+        .cont1 {
+            margin-top: 18px;
+        }
+
+        .cont1 h3 {
+            transition: color 1s;
+        }
+
+        .cont1 h3:hover {
+            color: #ff004f;
+        }
+        
+        .cont2 form {
+            display: flex;
+            flex-direction: column;
+            
+           }
+           .cont2 form input{
+           width: 500px;
+            margin-bottom: 20px;
+           }
+           .cont2 form textarea{
+               width: 520px;
+               height: 100px;
+               margin-bottom: 20px;
+           }
+           .cont2 h3{
+               color: #ff004f;
+           }
+        
+        .container3 {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            height: 30vh;
+            color: #ff004f;
+            font-size: 2rem;
+        }
+
+        .container3 input {
+            padding: 10px;
+            width: 250px;
+            margin-right: 10px;
+        }
+
+        .container3 button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+            border-radius: 3px;
+        }
+
+        .container3 button:hover {
+            background-color: #218838;
+        }
+
+        .doctors-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+
+        }
+
+        .doctor-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transition: background-color 3s ease, transform 3s ease;
+        }
+
+        .doctor-box:hover {
+            transform: translateY(-20px);
+            background-color: #ff004f;
+        }
+
+        .show-more {
+            margin-left: 650px;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .show-more:hover {
+            background-color: #218838;
+        }
+
+        .h3 {
+            margin-left: 530px;
+            font-size: 3rem;
+            color:white;
+        }
+        .consult {
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ff004f;
+        }
+
+        .doctor-container1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 100px;
+            margin-bottom: 20px;
+
+        }
+
+        .doctor1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+            color: #000000;
+            transition: background-color 3s ease, transform 2s ease;
+        }
+
+        .doctor1:hover {
+            transform: translateY(-10px);
+            background-color: #ff004f;
+        }
+
+        .btn {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            border-radius: 3px;
+        }
+
+        .consult h2 {
+            font-size: 2rem;
+            padding-top: 50px;
+        }
+
+
+
+        .buy {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 80vh;
+            margin-top: 100px;
+            color: #ff004f;
+        }
+
+        .medicine-container3 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .medicine-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            margin: 30px;
+            color: #000000;
+            transition: background-color 3s ease, width 2s ease,color 2s ease;
+        }
+
+        .medicine-card:hover {
+            width: 220px;
+            background-color: #ff004f;
+            color: white;
+        }
+
+        .medicine-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .medicine-card h3 {
+            margin: 10px 0;
+        }
+
+        .medicine-card p {
+            font-weight: bold;
+            color: #28a745;
+            transition: color 2s;
+        }
+        .medicine-card p:hover{
+            color: white;
+        }
+
+        .show-more1 {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .show-more1:hover {
+            background-color: rgb(65, 124, 65);
+        }
+
+        .buy h1 {
+            padding-bottom: 40px;
+            font-size: 3rem;
+        }
+       
+
+
+
+        .results{
+            color: white;
+            text-align:center;
+        }
+        .results h3{
+            font-size:2rem;
+            color: #ff004f;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 0px;
+            margin-left:150px;
+            margin-bottom:50px;
+            background-color:#000000;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color:green;
+        }
+        .medicine-info{
+            margin-top:80px;
+            border:2px solid white;
+            background-color:#000000;
+            text-align:center;
+            margin-right: 100px;
+            color :white
+        }
+        .medicine-info h2{
+            font-size:2rem;
+            color:green;
+        }
+        .res{
+            color:green;
+        }
+
+
+
+
+        .cont2 form {
+            display: flex;
+            flex-direction: column;
+            
+           }
+           .cont2 form input{
+           width: 500px;
+            margin-bottom: 20px;
+           }
+           .cont2 form textarea{
+               width: 520px;
+               height: 100px;
+               margin-bottom: 20px;
+           }
+           .cont2 h3{
+               color: #ff004f;
+           }

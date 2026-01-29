@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #ff004f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: green;
+        }
+
+        .na {
+            display: flex;
+            justify-content: space-around;
+
+        }
+        .btn:hover{
+         font-size: 1.8rem;
+         color: #ff004f;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="na">
+            <h2 class="btn" onclick="showlogin('login')">Login</h2>
+            <h2 class="btn" onclick="showsign('sign')">Sign up</h2>
+        </div>
+        <div class="login hidden " id="login">
+            <form action="login.php" method="POST">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+        </div>
+        <hr>
+        <div class="sign hidden" id="sign">
+            <form action="sign.php" method="POST">
+            <input type="text" name="name"id="name" placeholder="name">
+            <input type="email" name="email" id="email" placeholder="email">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button type="submit">Sign Up</button>
+             </form>
+        </div>
+    </div>
+    <script>
+        function showlogin(fragment){
+            document.getElementById('login').classList.remove('hidden');
+            document.getElementById('sign').classList.add('hidden');
+        }
+        function showsign(fragment){
+            document.getElementById('login').classList.add('hidden');
+            document.getElementById('sign').classList.remove('hidden');
+            
+        }
+    </script>
+   
+</body>
+
+</html>
+

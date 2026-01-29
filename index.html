@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Suggestor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header " id="home">
+        <div class="navbar" >
+            <a href="#home">Home</a>
+            <a href="#about">About The Medicine</a>
+            <a href="#health">Health Care Tips</a>
+            <a href="#find">Find Best Doctors</a>
+            <a href="#consult">Consult with Doctor</a>
+            <a href="#buy">Buy Medicine</a>
+            <a href="#men">About</a>
+        </div>
+        <div class="container">
+            <h2>Enter Your Symptoms</h2>
+            <form action="get_medicine.php" method="POST">
+                <input type="text" name="symptoms" id="symptoms" placeholder="E.g., Fever, Headache">
+                <button>Suggest Medicine </button>
+            </form>
+        </div>
+    </header>
+    <hr class="hr">
+    <main class="main">
+        <div class="container1">
+            <section class="section1" id="about">
+                <h1>About the Medicine</h1>
+                <div class="container1">
+                    <h2>Enter The Medicine Name</h2>
+                    <form action="about.php" method="POST">
+                        <input type="text" name="medicine_name" id="medicine_name" placeholder="E.g., paracetamol">
+                        <button>Search Medicine </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <hr class="hr">
+
+        <section class="section2" id="health">
+            <div class="container2">
+                <h1>Health & Care Tips</h1>
+                <p class="tip" id="healthTip">Click the button to get a health tip!</p>
+                <button onclick="generateTip()">Get a Tip</button>
+            </div>
+
+        </section>
+        <hr class="hr">
+
+
+        <section class="section3" id="find">
+            <div class="container3">
+                <h2>Find Best Doctors Near You</h2>
+                <input type="text" id="city" placeholder="Enter your location">
+                <button onclick="findDoctors()">Search</button>
+            </div>
+            <h3 class="h3">World Best Doctors</h3>
+            <div class="doctors-container">
+                <div class="doctor-box">
+                    <h3>Dr. William A. Abdu</h3>
+                    <p>Spinal Surgery</p>
+                </div>
+                <div class="doctor-box">
+                    <h3>Dr. Devi Shetty</h3>
+                    <p>Cardiac Surgery</p>
+                </div>
+                <div class="doctor-box">
+                    <h3>Dr. Sanjay Gupta</h3>
+                    <p>Neurosurgery</p>
+                </div>
+
+            </div>
+            <a class="show-more" href="https://medflick.com/blog/best-doctor-in-the-world" target="_blank">Show More</a>
+
+        </section>
+        <hr class="hr">
+
+
+        <section class="consult" id="consult">
+            <h2>Consult a Doctor</h2>
+            <div class="doctor-container1">
+                <div class="doctor1 h">
+                    <p><strong>Dr. John Doe</strong></p>
+                    <p>General Physician</p>
+                    <p>Contact: +1234567890</p>
+                </div>
+                <div class="doctor1 h">
+                    <p><strong>Dr. Jane Smith</strong></p>
+                    <p>Cardiologist</p>
+                    <p>Contact: +0987654321</p>
+                </div>
+                <div class="doctor1 h">
+                    <p><strong>Dr. Alice Brown</strong></p>
+                    <p>Neurologist</p>
+                    <p>Contact: +1122334455</p>
+                </div>
+                <div class="doctor1 h">
+                    <p><strong>Dr. Mark Wilson</strong></p>
+                    <p>Orthopedic</p>
+                    <p>Contact: +5566778899</p>
+                </div>
+                <div class="doctor1 h">
+                    <p><strong>Dr. Emily Davis</strong></p>
+                    <p>Dermatologist</p>
+                    <p>Contact: +6677889900</p>
+                </div>
+                <div class="doctor1 h">
+                    <p><strong>Dr. Robert White</strong></p>
+                    <p>Pediatrician</p>
+                    <p>Contact: +3344556677</p>
+                </div>
+            </div>
+            <button class="btn" onclick="window.location.href='https://www.apollo247.com/specialties'" target>Show More
+                Options</button>
+
+        </section>
+        <hr class="hr">
+
+
+        <section class="buy" id="buy">
+            <h1>Buy Medicine</h1>
+            <div class="medicine-container3">
+                <div class="medicine-card" onclick="goToShop()">
+                    <img src="Medicine1.png" alt="Medicine 1">
+                    <h3>Paracetamol</h3>
+                    <p>$5.00</p>
+                </div>
+                <div class="medicine-card" onclick="goToShop()">
+                    <img src="medicine2.png" alt="Medicine 2">
+                    <h3>Ibuprofen</h3>
+                    <p>$8.00</p>
+                </div>
+                <div class="medicine-card" onclick="goToShop()">
+                    <img src="medicine3.png" alt="Medicine 3">
+                    <h3>Cough Syrup</h3>
+                    <p>$12.00</p>
+                </div>
+            </div>
+            <button class="show-more1" onclick="goToShop()">Show More</button>
+
+        </section>
+        <hr class="hr">
+    </main>
+    <footer class="men" id="men">
+        <h1>Contact us</h1>
+        <div class="box">
+            <div class="cont1">
+                <h3><i class="fa-solid fa-phone"></i>Phone:8824780800</h3>
+                <h3><i class="fa-solid fa-envelope"></i>Gmail:tashikmiddha@gmail.com</h3>
+                <br>
+                
+            </div>
+            <div class="cont2">
+                <h3>Feedback Form</h3>
+                 <form action="feedback.php">
+                    <input type="text" name="name" id="name" placeholder="Enter the name">
+                    <input type="email" name="email" id="email" placeholder="enter the email">
+                    <textarea name="feedback" id="feedback"  placeholder="Enter your feedback"></textarea>
+                    <button type="submit">Submit</button>
+                 </form>
+            </div>
+        </div>
+        <div class="copy">
+            <h2>Made by Tashik Middha |<i class="fa-solid fa-copyright"></i> All Rights Reserved</h2>
+        </div>
+
+    </footer>
+    <script>
+        const tips = [
+            "Drink plenty of water to stay hydrated.",
+            "Get at least 7-8 hours of sleep every night.",
+            "Exercise regularly to keep your body fit.",
+            "Eat a balanced diet rich in fruits and vegetables.",
+            "Reduce stress through meditation or deep breathing.",
+            "Limit sugar and processed food intake.",
+            "Wash your hands frequently to prevent infections.",
+            "Maintain good posture to avoid back pain.",
+            "Take breaks from screens to reduce eye strain.",
+            "Stay active and avoid prolonged sitting."
+        ];
+
+        function generateTip() {
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            document.getElementById("healthTip").textContent = tips[randomIndex];
+        }
+    </script>
+    <script>
+        function findDoctors() {
+            let city = document.getElementById("city").value;
+            if (city) {
+                let query = `https://www.google.com/maps/search/best+doctors+in+${encodeURIComponent(city)}/`;
+                window.open(query, '_blank');
+            } else {
+                alert("Please enter a city name");
+            }
+        }
+    </script>
+    <script>
+        function goToShop() {
+            window.location.href = "https://www.netmeds.com/?srsltid=AfmBOoqQyeaxQHnLCc9cdmW4PJMMSMGZz-IvQMAmo5PuHZc42fVEmTnG";
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/e616eb472b.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
